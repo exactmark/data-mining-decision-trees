@@ -1,7 +1,7 @@
 # data-mining-decision-trees
 An implementation of a simple decision tree algorithm from a Big Data course.
 
-##Implementation
+## Implementation
 DecisionTreeStructures includes classes needed to create a simple decision tree model, while MathFunctions includes functions that are required to create the model (but may also be potentially stand alone).  
 DecisionTreeStructures consists of three important classes:  
 1. My Dataset class will take a given csv and convert it to a pandas DataFrame.  Pandas allows python users to make some r-style DataFrame queries and is relatively quick.  
@@ -14,7 +14,7 @@ The tree visualization uses the ete3 library.
 
 In all cases, I have attempted to keep clean code in mind, including proper function and variable names, as well as sufficient decoupling between the data structures and the functional methods.
 
-##Possible Improvements and Optimizations
+## Possible Improvements and Optimizations
 The MathFunctions section could be improved.  I created my own function to create binary subsets, and it will return equivalent lists in varying order--- that is ((a,b),(c)) and ((c),(a,b)).  This will lead to much more work being done by determine_best_split.  However, as this dataset is relatively small, the optimization here can wait.  
 I am treating all attributes as non-ordinal.  While some attributes have obvious ordering (low,med,high) it is currently being ignored.  This would need to be addressed if I wanted to continue this project further.  However, with this dataset, accuracy seems to be acceptable.
 
